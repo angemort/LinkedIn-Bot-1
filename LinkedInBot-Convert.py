@@ -553,6 +553,7 @@ def createCSV(data, time):
 	time is the time at creation of this file
 	'''
 	filename = 'Linked-In-'+time+'.csv'
+	filename = filename.replace(":", "_")
 	with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'CSV', filename), 'w') as csvFile:
 		writer = csv.writer(csvFile)
 		writer.writerow(data)
@@ -565,6 +566,7 @@ def addToCSV(data, time):
 	time is the time at creation of this file
 	'''
 	filename = 'Linked-In-'+time+'.csv'
+	filename = filename.replace(":", "_")
 	with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'CSV', filename), 'a') as csvFile:
 		writer = csv.writer(csvFile)
 		writer.writerow(data)
